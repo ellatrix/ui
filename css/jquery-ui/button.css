@@ -1,0 +1,205 @@
+/*!
+ * jQuery UI Button @VERSION
+ * http://jqueryui.com
+ *
+ * Copyright 2014 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/button/#theming
+ */
+.wp-core-ui .ui-button {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 26px;
+	height: 28px;
+	margin: 0;
+	padding: 0 10px 1px;
+	cursor: pointer;
+	border-width: 1px;
+	border-style: solid;
+	-webkit-appearance: none;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	white-space: nowrap;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Remove the dotted border on :focus and the extra padding in Firefox */
+.wp-core-ui .ui-button::-moz-focus-inner,
+.wp-core-ui input[type="reset"].ui-button.ui-button::-moz-focus-inner,
+.wp-core-ui input[type="button"].ui-button::-moz-focus-inner,
+.wp-core-ui input[type="submit"].ui-button::-moz-focus-inner {
+	border-width: 1px 0;
+	border-style: solid none;
+	border-color: transparent;
+	padding: 0;
+}
+
+.wp-core-ui .ui-button:active {
+	outline: none;
+}
+
+.wp-core-ui input[type="reset"].ui-button,
+.wp-core-ui input[type="reset"].ui-button:hover,
+.wp-core-ui input[type="reset"].ui-button:active,
+.wp-core-ui input[type="reset"].ui-button:focus {
+	background: none;
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding: 0 2px 1px;
+	width: auto;
+}
+
+.wp-core-ui .ui-button {
+	color: #555;
+	border-color: #cccccc;
+	background: #f7f7f7;
+	-webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 0 rgba(0,0,0,.08);
+	box-shadow: inset 0 1px 0 #fff, 0 1px 0 rgba(0,0,0,.08);
+ 	vertical-align: top;
+}
+
+.wp-core-ui p .ui-button {
+	vertical-align: baseline;
+}
+
+.wp-core-ui .ui-button:hover,
+.wp-core-ui .ui-button:focus {
+	background: #fafafa;
+	border-color: #999;
+	color: #222;
+}
+
+.wp-core-ui .ui-button:focus {
+	outline: thin dotted;
+}
+
+.wp-core-ui .ui-button:focus {
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+	box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+}
+
+.wp-core-ui .ui-button:active,
+.wp-core-ui .ui-button.ui-state-active {
+	background: #eee;
+	border-color: #999;
+	color: #333;
+ 	-webkit-box-shadow: inset 0 2px 5px -3px rgba( 0, 0, 0, 0.5 );
+ 	box-shadow: inset 0 2px 5px -3px rgba( 0, 0, 0, 0.5 );
+}
+
+.wp-core-ui .ui-button[disabled],
+.wp-core-ui .ui-button:disabled {
+	color: #aaa !important;
+	border-color: #ddd !important;
+	background: #f7f7f7 !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	text-shadow: 0 1px 0 #fff !important;
+	cursor: default;
+}
+
+.wp-core-ui .ui-buttonset {
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 0;
+	vertical-align: middle;
+}
+
+.wp-core-ui .ui-buttonset > .ui-button {
+	display: inline-block;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	margin-right: -1px;
+	z-index: 10;
+}
+
+.wp-core-ui .ui-buttonset > .ui-button:hover {
+	z-index: 20;
+}
+
+.wp-core-ui .ui-buttonset > .ui-button:first-of-type {
+	-webkit-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+}
+
+.wp-core-ui .ui-buttonset > .ui-button:last-of-type {
+	-webkit-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+}
+
+@media screen and ( max-width: 782px ) {
+
+	.wp-core-ui .ui-button {
+		padding: 6px 14px;
+		line-height: normal;
+		font-size: 14px;
+		vertical-align: middle;
+		height: auto;
+		margin-bottom: 4px;
+	}
+
+}
+
+.wp-core-ui .ui-button > span {
+	display: inline-block;
+}
+
+.wp-core-ui .ui-button-icon-only .ui-button-text,
+.wp-core-ui .ui-button-icons-only .ui-button-text {
+	display: none;
+}
+
+.wp-core-ui .ui-button-icon-only,
+.wp-core-ui .ui-button-icons-only {
+	padding: 0 5px 1px;
+}
+
+.ui-button .ui-icon {
+	margin-top: 5px;
+}
+
+/*
+
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+	padding: .4em 1em .4em 2.1em;
+}
+.ui-button-text-icon-secondary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+	padding: .4em 2.1em .4em 1em;
+}
+.ui-button-text-icons .ui-button-text {
+	padding-left: 2.1em;
+	padding-right: 2.1em;
+}
+
+.ui-button-icon-only .ui-icon,
+.ui-button-text-icon-primary .ui-icon,
+.ui-button-text-icon-secondary .ui-icon,
+.ui-button-text-icons .ui-icon,
+.ui-button-icons-only .ui-icon {
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-button-icon-only .ui-icon {
+	left: 50%;
+	margin-left: -8px;
+}
+.ui-button-text-icon-primary .ui-button-icon-primary,
+.ui-button-text-icons .ui-button-icon-primary,
+.ui-button-icons-only .ui-button-icon-primary {
+	left: .5em;
+}
+.ui-button-text-icon-secondary .ui-button-icon-secondary,
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+	right: .5em;
+}*/
