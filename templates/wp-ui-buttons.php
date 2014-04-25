@@ -16,17 +16,17 @@ Scripts: jQuery
 <table class="form-table">
 	<tbody>
 	<?php foreach ( array(
-		'button button-small',
-		'button',
-		'button button-large',
-		'button button-hero'
+		' button-small',
+		'',
+		' button-large',
+		' button-hero'
 	) as $button ) { ?>
 		<tr>
 			<td>
-				<button class="<?php echo $button ?>">Button</button>
+				<button class="<?php echo 'button' . $button; ?>">Button</button> <button class="<?php echo 'button button-primary' . $button; ?>">Button</button>
 			</td>
 			<td>
-				<code><?php echo $button; ?></code>
+				<code><?php echo 'button' . $button; ?></code> <code><?php echo 'button button-primary' . $button; ?></code>
 			</td>
 		</tr>
 	<?php } ?>
