@@ -75,6 +75,7 @@ UI Page: Elements
 		'<input type="week">' => '<input type="week" value=""> <input type="week" value="Disabled" disabled> <input type="week" value="Read only" readonly>',
 		'<textarea>' => '<textarea placeholder="Placeholder"></textarea> <textarea disabled>Disabled</textarea> <textarea readonly>Read only</textarea>',
 		'<select>, <option>' => '<select><option>Option 1</option><option>Option 2</option><option disabled>Disabled</option></select> <select disabled><option>Disabled</option></select>',
+		'<select multiple>, <option>' => '<select multiple><option>Option 1</option><option>Option 2</option><option disabled>Disabled</option></select> <select multiple disabled><option>Disabled</option></select>',
 		'class="attention"' => '<span class="attention">Attention!</span>',
 		'class="highlight"' => '<span class="highlight">Highlight!</span>',
 	);
