@@ -4,9 +4,10 @@
 UI Page: Dashicons
 */
 
-$data = file_get_contents( site_url( '/wp-includes/css/dashicons.min.css' ) );
+$data = file_get_contents( site_url( '/wp-includes/css/dashicons' . ( defined( 'WP_DEBUG' ) && WP_DEBUG ? '' : '.min' ) . '.css' ) );
+$data = preg_replace( '/\s+/', '', $data );
 
-preg_match_all( "/\.dashicons-([A-Za-z0-9-]+):before{content:\"\\\\([A-Za-z0-9]+)\"}/", $data, $dashicons );
+preg_match_all( "/\.dashicons-([A-Za-z0-9-]+):before{content:\"\\\\([A-Za-z0-9]+)\";?}/", $data, $dashicons );
 
 $dashicons = array_combine( $dashicons[1], $dashicons[2] );
 
